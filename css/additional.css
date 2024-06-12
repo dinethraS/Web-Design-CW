@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body{
+  font-family: sans-serif;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  background: #0c1a1a;
+}
+nav{
+  height: 70px;
+  width: 101%;
+  background: #6acfc7;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  z-index: 100;
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  background: #6acfc7;
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color: #0c1a1a;
+}
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #0c1a1a;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid #042331;
+  border-top: none;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+nav ul ul li a i{
+  margin-left: 45px;
+}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+position: fixed;
+top: 0;
+width: 100%
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+padding-top: 102px;
+}
+.logo{
+  position: absolute;
+  margin: 100px;
+  margin-top: 80px;
+  margin-top: 0;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.logo img{
+  height: 60px;
+  padding-top: 10px;
+  width: 225px;
+}
+#myHeader{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#scroll{
+  position: absolute;
+  background:#081111;
+  top: 70px;
+  left: 0;
+  height: 132.5%;
+  width: 25%;
+  color: #fff;
+  overflow: auto;
+}
+
+#scroll h1{
+  margin-top: 3%;
+  margin-left: 5%;
+  color: #fff;
+}
+
+#mainHeading{
+  margin-left: 10%;
+  color: #fff;
+  margin-top: 1%;
+}
+
+.imgScroll{
+  width: 100%;
+  height: 100%;  
+}
+
+.song{
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  width: 90%;
+  height: 20%;  
+}
+
+.song .links{
+  position: absolute;
+  background-color: #ffffffd3;
+  width: 90%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  display: none;
+  color: #000;
+  font-size: 100%;
+
+}
+
+.links pre{
+  font-size: larger;
+}
+.links:hover{
+  opacity: 1;
+}
+
+.links img{
+  width: 100%;
+  height: 100%;
+  float: right;
+  top: 140px;
+  padding-left: 25px;
+}
+
+.youtube{
+  width: 130px;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+}
+.youtube, .spotify{
+  position: absolute;
+}
+
+.spotify{
+  width: 65px;
+  height: 45px;
+  top: 100px;
+  right: 0;
+  padding-right: 10px;
+}
+
+.links img:hover{
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+#container{
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  top: 70px;
+  left: 25%;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 2%;
+}
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slider img.active {
+    opacity: 1;
+}
+.buttons {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#prevbtn{
+  top: 200px;
+  left: 4%;
+}
+
+#nextbtn{
+  top: 200px;
+  right: 1%;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  } 
+
+.subcontainer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  width: 80%;
+  height: 70%;
+}
+
+.news, .info{
+  position: relative;
+  width: 100%;
+  height: 100%; 
+}
+
+.sticky{
+  position: sticky;
+  left: 0;
+}
+
+.info{
+  color: #fff;
+  font-size: larger;
+  padding-left: 6%;
+  padding-top: 5%;
+}
+
+.news{
+  overflow-x: auto;
+  white-space: nowrap;
+    
+}
+
+.news img{
+  width: 100%;
+  height:83%
+}
+
+.sticky h1, .sticky pre {
+  color:#fff;
+}
+
+.sticky h1{
+  margin-top: 5%;
+}
+
+.sticky pre{
+  font-size: xx-large;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.footer-distributed{
+  background: #272323;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 20px 50px;
+  position: absolute;
+  top: 150%;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 35%;
+  padding-top: 90px;
+}
+
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 25%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.margin_top{
+  margin-top:3px;
+}
+#link1{
+  top: 7%;
+}
+
+#link2{
+  top: 36%;
+}
+
+#link3{
+  top: 65.5%;
+}
+
+#link4{
+  top: 94.75%;
+}
+#link5{
+  top: 124%;
+}
+
+#link6{
+  top: 153.5%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

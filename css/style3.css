@@ -1,0 +1,144 @@
+/* Creating main colour theme for the site */
+:root {
+  --blue: #7cb9cc;
+  --black: #19191a;
+  --grey: #282c2c;
+}
+
+/* Removing all default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/* Adding colour white to every element */
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adding custom font to every element */
+html,
+body,
+form,
+fieldset,
+table,
+tr,
+td,
+img {
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Changing text selection colour */
+::-moz-selection {
+  background: var(--blue);
+}
+
+::selection {
+  background: var(--blue);
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+body {
+  background-color: var(--black);
+}
+
+/* .active:hover {
+  color: white;
+  box-shadow: 0px 0px 7px var(--blue);
+  transition: 0.4s;
+} */
+
+h1 {
+  font-size: 65px;
+  text-shadow: 3px 2px 5px var(--blue);
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  border: 1px solid var(--blue);
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--blue);
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px var(--grey) inset;
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: var(--black);
+  border: solid 1px var(--blue);
+  outline: none;
+  color: white;
+  transition: 0.4s;
+}
+
+input:focus {
+  background-color: var(--grey);
+  border: solid 1px var(--blue);
+}
+
+/* Creating re-usable style classes to increase code efficiency */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: var(--blue);
+  color: white;
+  border: 2px solid var(--blue);
+  transition: all 0.4s ease;
+}
+.btn:hover {
+  background-color: transparent;
+  box-shadow: inset 0px 0px 5px var(--blue), 0px 0px 5px var(--blue);
+  cursor: pointer;
+}
+
+hr {
+  padding-bottom: 0.5px;
+  margin-bottom: 3px;
+  background-color: var(--blue);
+  border: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

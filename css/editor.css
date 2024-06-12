@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+  text-align: center;   
+}
+p{
+  background-color: rgb(220, 227, 230);            
+}
+h1{
+  background-color: #6acfc7;
+  color: black;
+}
+.editorpage{
+  background-color: #6acfc7;
+  color: black;
+}
+.info{
+  background-color:#6acfc7;
+}
+

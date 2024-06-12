@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="icon" href="logo/musicIcon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="cart.js" async></script>
+    <title>SHOP</title>
+  </head>
+  <body>
+    <!--navigation bar-->
+    <header>
+      <nav id="myHeader">
+        <label class="logo"><img src="logo/logo.jpg" alt=""></label>
+         <ul>
+            <li><a href="../Index.html">Home</a></li>
+            <li>
+               <a href="#">Features
+               <i class="fas fa-caret-down"></i>
+               </a>
+               <ul>
+                  <li><a href="../stu4/Gallery.html">Gallery</a></li>
+                  <li><a href="../stu4/siteMap.html">Sitemap</a></li>
+                  <li><a href="../quiz.html">Quiz</a></li>
+               </ul>
+            </li>
+            <li>
+              <a href="#">Contents
+              <i class="fas fa-caret-down"></i>
+              </a>
+              <ul>
+                  <li><a href="additional.html">Hip-Pop</a></li>
+                  <li><a href="../Edm.html">EDM</a></li>
+                  <li><a href="../country.html">Country</a></li>
+                  <li><a href="../stu4/rock.html">Rock</a></li>
+              </ul>
+          </li>
+            <li><a class="active" href="buyproducts.html">Store</a></li>
+            <li><a href="../team.html">About&nbsp;us</a></li>
+            <li><a href="../Feedback.html">Feedback</a></li>
+         </ul>
+      </nav>
+    </header>
+    
+    <!--products add to cart-->
+    <section class="product-page">
+      <h1 class="product-header"> Drake - Merch </h1>
+      <div class="product-page-content flex flex-column flex-center">
+        <div class="product-form">
+          
+        </div>
+        <!--products-->
+        <div class="products flex">
+          <div class="product item1">
+            <img
+              class="product-image"
+              src="images/hbuydr1.png"
+              alt="CD Image" 
+              style="width: 200px;height: 250px;" 
+            >
+            <div class="product-details">
+              <span class="product-name"> CD</span>
+              <span class="product-price">$16</span>
+              <div class="addtocart-wrapper">
+                <button class="btn btn-addtocart" type="button">
+                  <i class="fas fa-shopping-cart"></i>Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        <div class="product item2">
+          <img
+            class="product-image"
+            src="images/hbuydr2.png"
+            alt="> Hoodie Image" 
+            style="width: 200px;height: 250px;" 
+          >
+
+          <div class="product-details">
+            <span class="product-name"> Hoodie</span>
+            <span class="product-price">$6</span>
+            <div class="addtocart-wrapper">
+              <button class="btn btn-addtocart" type="button">
+                <i class="fas fa-shopping-cart"></i>Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product item3">
+          <img
+            class="product-image"
+            src="images/hbuydr3.jfif"
+            alt="Cap Image"
+            style="width: 200px;height: 250px;" 
+          >
+          <div class="product-details">
+            <span class="product-name">Cap</span>
+            <span class="product-price">$4</span>
+            <div class="addtocart-wrapper">
+              <button class="btn btn-addtocart" type="button">
+                <i class="fas fa-shopping-cart"></i>Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product item4">
+          <img
+            class="product-image"
+            src="images/hbuydr4.jpg" 
+            alt="T - Shirt Image" 
+            style="width: 200px;height: 250px;" 
+          >
+          <div class="product-details">
+            <span class="product-name"> T - Shirt</span>
+            <span class="product-price">$7</span>
+            <div class="addtocart-wrapper">
+              <button class="btn btn-addtocart" type="button">
+                <i class="fas fa-shopping-cart"></i>Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <!--user inputs-->
+      <form>
+        <div class="product-form-element">
+          <label for="customer-name">Name : </label>
+          <input type="text" id="customer-name" name="name" >
+        </div>
+        <div class="product-form-element">
+          <label for="customer-email">E-Mail : </label>
+          <input type="text" id="customer-email" name="email" >
+        </div>
+      </form>
+
+      <!--products cart-->
+      <div class="cart  invisible" id="cart">
+
+        <div class="row">
+          <div class="col-12">
+
+            <div class="bg-whit">
+
+              <div class="setmar">
+                <div class="cart-row">
+                  <span class="cart-item cart-header cart-column c-b">ITEM</span>
+                  <span class="cart-price cart-header cart-column c-b">PRICE</span>
+                  <span class="cart-quantity cart-header cart-column c-b">QUANTITY</span>
+                </div>
+                <div class="cart-items"></div>
+              </div>
+
+            </div>
+
+            <div class="col-3 offset-1">
+
+              <div class="dis">
+                <div class="setmar">
+                <div class="cart-">
+                  <strong class="fn-s c-b">Shipping Fee</strong>
+                  <span class="cart-total- c-b">$0</span>
+                </div>
+                <div class="cart-">
+                  <strong class=" fn-s2 c-b">Tax</strong>
+                  <span class="cart-total- c-b">$0</span>
+                </div>
+                <div class="cart-total border_up">
+                  <strong class="cart-total-title fn-s3 c-b">Total</strong>
+                  <span class="cart-total-price c-r">$0</span>
+                </div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-purchase margin_left" type="button">
+          <i class="fas fa-shopping-cart"></i>Place Order
+        </button>
+      </div>
+      </div>
+
+      <!--invoice-->
+      <div class="invoice-content flex flex-center flex-column invisible">
+        <div class="invoice-container">
+          <div class="customer-details">
+            <h6>Customer Details</h6>
+            <p class="customer-name-invoice"></p>
+            <p class="customer-email-invoice"></p>
+          </div>
+
+          <div class="invoice-details">
+            <h6>Invoice Details</h6>
+            <div class="invoice-rows"></div>
+            <div class="invoice-total"><strong>Total Bill : </strong> $100</div>
+          </div>
+          
+        </div>
+        <button class="btn btn-edit">
+          <i class="fas fa-pen"></i>Change Order
+        </button>
+      </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Music<span>o</span>re</h3>
+        <p class="footer-company-name">MUSICORE (PVT) LTD © 2023</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>7/8, School lane</span> Nugegoda, Sri Lanka</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+94 72 048 7604</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:dinithi.20221195@iit.ac.lk">support@Musicore.com</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-edit"></i>
+          <p><a href="editorform.html">Page Editor</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          At Musicore, we believe that music has the power to connect people and inspire creativity,
+          which is why we made a hub for music lovers to explore new genres, listen to
+          their favorite songs, learn from industry experts, and create their own musical masterpieces
+        </p>
+
+      </div>
+
+    </footer>
+
+    <!--java script for navigation bar-->
+    <script>
+      //Javascript for sticky navigation bar
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("myHeader");
+      
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
